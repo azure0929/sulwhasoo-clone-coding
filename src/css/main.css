@@ -1,0 +1,978 @@
+@charset "utf-8";
+
+/* Common */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -.07em;
+  word-spacing: 0.05em;
+  line-height: 1.5;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+button {
+  border: none;
+}
+
+
+/* Header */
+.renew2022-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.renew2022-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .4s linear;
+  background-color: #fff;
+  z-index: -1;
+}
+.renew2022-header:hover::before {
+  opacity: 1;
+}
+.renew2022-header .l-header {
+  position: relative;
+  max-width: 1100px;
+  height: 78px;
+  margin: 0 auto;
+  padding: 0 7%;
+  text-align: center;
+}
+.renew2022-header .l-header .logo {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  display: table;
+  height: 100%;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: top;
+  z-index: 5;
+}
+.renew2022-header .l-header .logo .logo-a {
+  display: table-cell;
+  width: 100%;
+  padding-top: 1px;
+  vertical-align: middle;
+  color: #fff;
+}
+.renew2022-header:hover .l-header .logo .logo-a .logo-img {
+  background: url("https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/sulwhasoo_orange_logo_220902.png") no-repeat center;
+  background-size: contain;
+  height: 40px;
+}
+.renew2022-header .l-header .logo .logo-a .logo-img {
+  width: 166px;
+  display: inline-block;
+  background: url("https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/sulwhasoo_white_logo_220902.png") no-repeat center;
+  background-size: contain;
+  height: 40px;
+}
+.renew2022-header .l-header .header-inner {
+  position: relative;
+  height: 100%;
+}
+.renew2022-header .l-header .header-inner .sidenav-open {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  margin-top: -15px;
+  padding: 5px;
+  z-index: 2;
+}
+.renew2022-header .l-header .header-inner .select-language {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 15px;
+  letter-spacing: .05em;
+}
+.renew2022-header .l-header .header-inner .select-language .select-language-a {
+  position: relative;
+  display: block;
+  padding-left: 1px;
+  padding-right: 24px;
+  letter-spacing: -.5px;
+  color: #fff;
+}
+.renew2022-header:hover .l-header .header-inner .select-language .select-language-a {
+  color: #000;
+}
+.renew2022-header .l-header .header-inner .select-language .select-language-a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 14px;
+  height: 100%;
+  background-image: url("https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/newsulwhasoo_hd_white_arr_b_220902.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.renew2022-header:hover .l-header .header-inner .select-language .select-language-a::after {
+  background-image: url("https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/newsulwhasoo_hd_black_arr_b_220902.png");
+}
+.renew2022-header .l-header .header-inner .misc-links {
+  position: absolute;
+  top: 15px;
+  right: -8px;
+  width: 35%;
+  height: 23px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.renew2022-header .l-header .header-inner .misc-links a {
+  color: #fff;
+}
+.renew2022-header:hover .l-header .header-inner .misc-links a {
+  color: #000;
+}
+.renew2022-header .l-header .header-inner .misc-links .misc-a {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.renew2022-header .l-header .header-inner .misc-links .misc-a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  height: 13px;
+  border-left: 1px solid #c9c9c9;
+}
+.renew2022-header .l-header .header-inner .misc-links .misc-open-search {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  padding-left: 15px;
+  background-image: url("https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/newsulwhasoo_hd_white_search_220902.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.renew2022-header:hover .l-header .header-inner .misc-links .misc-open-search {
+  background-image: url("https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/newsulwhasoo_hd_black_search_220902.png");
+}
+.renew2022-header .gnb {
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+.renew2022-header:hover .gnb {
+  padding-bottom: 32px;
+  transition: .3s ease-in-out;
+}
+.renew2022-header .gnb .l-wrap {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 7%;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu {
+  position: relative;
+  border-bottom: 1px solid rgb(255, 255, 255, 0);
+  padding: 6px 0 4px;
+  line-height: 1;
+  font-size: 16px;
+  z-index: 10;
+}
+.renew2022-header:hover .gnb .l-wrap .gnb-menu {
+  border-bottom-color: #d5d5d5;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1 {
+  display: inline-block;
+  margin: 0 10px 7px;
+  height: 30px;
+  letter-spacing: -.025em;
+  vertical-align: middle;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1:nth-of-type(1) {
+  position: relative;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1 .nav-d1-a {
+  position: relative;
+  color: #fff;
+  display: block;
+  padding: 10px 15px 3px;
+}
+.renew2022-header:hover .gnb .l-wrap .gnb-menu .nav-d1 .nav-d1-a {
+  color: #000;
+}
+.renew2022-header:hover .gnb .l-wrap .gnb-menu .nav-d1 .nav-d1-a span {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1 .nav-d1-a:hover span::after {
+  opacity: 1;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1 .nav-d1-a span::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: 0;
+  height: 2px;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1 .nav-d1-a:hover + .nav-d2-box {
+  visibility: visible;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1 .nav-d2-box {
+  position: absolute;
+  display: flex;
+  padding-top: 3px;
+  white-space: nowrap;
+  visibility: hidden;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1:nth-of-type(3) .nav-d2-box {
+  transform: translateX(-50px);
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1:nth-of-type(4) .nav-d2-box {
+  transform: translateX(-260px);
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1:nth-of-type(5) .nav-d2-box {
+  transform: translateX(-100px);
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1:nth-of-type(6) .nav-d2-box {
+  transform: translateX(-50px);
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1 .nav-d2-box .nav-d2-a {
+  display: block;
+  padding: 4px 15px 6px;
+  font-size: 15px;
+  letter-spacing: 0;
+  color: #888;
+}
+.renew2022-header .gnb .l-wrap .gnb-menu .nav-d1 .nav-d2-box .nav-d2-a:hover {
+  color: #000;
+  font-weight: 500;
+}
+
+
+/* Section__Common */
+.renew2022-main .swiper-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 68px;
+  height: 68px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, .4);
+  overflow: hidden;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: content-box;
+  z-index: 1;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+}
+
+section.renew2022-main-section .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+section.renew2022-main-section {
+  margin-top: 120px;
+  padding: 0 24px;
+}
+section.renew2022-main-section .renew2022-section-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+section.renew2022-main-section .renew2022-section-title {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  padding-bottom: 20px;
+}
+
+
+/* Section : 배너 */
+section.renew2022-kv-section .renew2022-kv {
+  height: 100%;
+}
+section.renew2022-kv-section .renew2022-kv .swiper-button__prev {
+  left: 0;
+  background-image: url("https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/20210324-main-kv-arr-l.png");
+}
+section.renew2022-kv-section .renew2022-kv .swiper-button__next {
+  right: 0;
+  background-image: url("https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/20210324-main-kv-arr-r.png");
+}
+section.renew2022-kv-section .renew2022-kv .kv-list {
+  position: relative;
+}
+section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item .link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item .link .renew2022-image .renew2022-image__box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item .link .renew2022-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item .link .renew2022-inner .renew2022-text-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 130px;
+}
+section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item .link .renew2022-inner .renew2022-text-wrap .renew2022-text--s {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  color: #fff;
+  text-shadow: 1px 1px 6px #666;
+}
+section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item .link .renew2022-inner .renew2022-text-wrap .renew2022-text--m {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  color: #fff;
+  text-shadow: 1px 1px 6px #666;
+  padding: 13px 0 11%;
+}
+section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item:nth-of-type(4) .link .renew2022-inner .renew2022-text-wrap .renew2022-text--s,
+section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item:nth-of-type(4) .link .renew2022-inner .renew2022-text-wrap .renew2022-text--m {
+  color: #000;
+  text-shadow: none;
+}
+section.renew2022-kv-section .pagination-container {
+  position: absolute;
+  width: 100%;
+  bottom: 70px;
+  left: 170px;
+  z-index: 9;
+}
+section.renew2022-kv-section .pagination-container .pagination-container__inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+section.renew2022-kv-section .pagination-container .pagination-container__inner .swiper-pagination {
+  position: relative;
+  bottom: 0;
+  width: 420px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, .4);
+}
+section.renew2022-kv-section .pagination-container .pagination-container__inner .swiper-pagination .swiper-pagination-progressbar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #fff;
+}
+section.renew2022-kv-section .pagination-container .pagination-container__inner .control-btn {
+  width: 9px;
+  height: 11px;
+  background-size: contain;
+  background-position: 50% 0;
+  background: url("https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/sulwhasoo_main_stop_220902.png") no-repeat center;
+  opacity: 1;
+}
+
+
+/* Section : 설화수 추천 */
+section.renew2022-main-section--recommend {
+  position: relative;
+  box-sizing: border-box;
+}
+section.renew2022-main-section--recommend .swiper-button {
+  top: 0;
+  transform: translateY(0);
+  margin-top: 13.8888888889%;
+  background-color: rgba(255, 255, 255, .4);
+}
+section.renew2022-main-section--recommend .swiper-button__prev {
+  left: 0;
+  background-image: url(https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/20210324-main-kv-arr-l.png);
+}
+section.renew2022-main-section--recommend .swiper-button__next {
+  right: 0;
+  background-image: url(https://www.sulwhasoo.com/kr/ko/resource/img/mainnew/20210324-main-kv-arr-r.png);
+}
+section.renew2022-main-section--recommend .pagination-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+section.renew2022-main-section--recommend .pagination-container .pagination-container__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+section.renew2022-main-section--recommend .pagination-container .pagination-container__inner .swiper-pagination {
+  position: relative;
+  bottom: 0;
+  width: 420px;
+  height: 4px;
+  background-color: #ddd;
+}
+section.renew2022-main-section--recommend .pagination-container .pagination-container__inner .swiper-pagination .swiper-pagination-progressbar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #000;
+}
+section.renew2022-main-section--recommend .pagination-container .pagination-container__inner .control-btn {
+  width: 9px;
+  height: 11px;
+  background-size: contain;
+  background-position: 50% 0;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjExIj4KICAgIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzIyMiIgZD0iTTUuOTk5IDEwLjk5OVYwaDN2MTAuOTk5aC0zek0wIDBoMi45OTl2MTAuOTk5SDBWMHoiLz4KPC9zdmc+Cg==") no-repeat center;
+  opacity: 1;
+}
+section.renew2022-main-section--recommend .renew2022-recommend-swiper-list {
+  margin-bottom: 64px;
+}
+section.renew2022-main-section--recommend .renew2022-recommend-swiper-list .swiper-slide {
+  display: flex;
+}
+section.renew2022-main-section--recommend .renew2022-recommend-swiper-list .recommend-swiper-list__item {
+  display: block;
+  max-width: 464px;
+  margin-right: 24px;
+}
+section.renew2022-main-section--recommend .renew2022-recommend-swiper-list .recommend-swiper-list__item:last-child {
+  margin-right: 0px;
+}
+section.renew2022-main-section--recommend .renew2022-recommend-swiper-list .recommend-swiper-list__item .renew2022-slide-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+section.renew2022-main-section--recommend .renew2022-recommend-swiper-list .recommend-swiper-list__item .renew2022-slide-inner .renew2022-text--l {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  margin-top: 23px;
+}
+section.renew2022-main-section--recommend .renew2022-recommend-swiper-list .recommend-swiper-list__item .renew2022-slide-inner .renew2022-text--m {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  color: #888;
+  padding: 2px 0 14px;
+}
+section.renew2022-main-section--recommend .renew2022-recommend-swiper-list .recommend-swiper-list__item .renew2022-slide-inner .renew2022-text--s {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+
+
+/* Section : 베스트 셀러 */
+section.renew2022-main-section--gtm .renew2022-section-wrap {
+  position: relative;
+}
+section.renew2022-main-section--gtm .renew2022-text-wrap {
+  position: absolute;
+  left: 12%;
+  bottom: 16%;
+}
+section.renew2022-main-section--gtm .renew2022-text-wrap .renew2022-text--l {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+section.renew2022-main-section--gtm .renew2022-text-wrap .renew2022-text--m {
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: -.025em;
+  color: #666;
+  padding: 7px 0 0 0;
+}
+section.renew2022-main-section--gtm .renew2022-text-wrap .renew2022-button--more {
+  border: 1px solid #000;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  padding: 8px 23px;
+  margin: 26px 0 0 0;
+}
+
+
+/* Section : 설화수 시즌추천 */
+section.renew2022-main-section--season {
+  margin-bottom: 170px;
+}
+section.renew2022-main-section--season .renew2022-section__body {
+  overflow: hidden;
+}
+section.renew2022-main-section--season .renew2022-season {
+  padding-bottom: 15px;
+}
+section.renew2022-main-section--season .renew2022-season .season-list {
+  display: flex;
+}
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box {
+  position: relative;
+  text-align: center;
+}
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box--1,
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box--3 {
+  position: relative;
+  flex: 1 1 auto;
+  width: 20%;
+  background-color: #ededed;
+  padding: 16px;
+  padding-bottom: 3.4722222222%;
+  box-sizing: border-box;
+}
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box .renew2022-text-wrap .renew2022-text--l {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  padding-bottom: 3px;
+}
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box .renew2022-text-wrap .renew2022-text--m {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  color: #888;
+  padding: 0 1.7708333333% 15px;
+}
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box .renew2022-text-wrap .renew2022-text--s {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box--2 {
+  text-align: left;
+  margin: 0 24px;
+  width: 50%;
+  padding: 0;
+  background-color: #fff;
+}
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box--2 .renew2022-text-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 0;
+}
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box--2 .renew2022-text-wrap .renew2022-text--l {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  padding-left: 8.7570621469%;
+}
+section.renew2022-main-section--season .renew2022-season .season-list .season-item-box--2 .renew2022-text-wrap .renew2022-text--m {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  color: #666;
+  padding-top: 1.0638297872%;
+  padding-left: 8.7570621469%;
+  padding-bottom: 6.8085106383%;
+}
+
+
+/* Section : 서비스 */
+section.renew2022-main-section--service .service-list {
+  margin: 0 -13px;
+  display: flex;
+  justify-content: center;
+}
+section.renew2022-main-section--service .service-list .service-list__item {
+  width: 100%;
+  margin: 0 13px;
+}
+section.renew2022-main-section--service .renew2022-text-wrap {
+  text-align: center;
+}
+section.renew2022-main-section--service .renew2022-text-wrap .renew2022-text--l {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+  padding: 22px 0 14px;
+}
+section.renew2022-main-section--service .renew2022-text-wrap .renew2022-button--more {
+  border: 1px solid #000;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: -.025em;
+  padding: 1.5% 5%;
+}
+
+
+/* Section : With Sulwhasoo */
+section.renew2022-main-section--pixley {
+  position: relative;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix {
+  position: relative;
+  display: flex;
+  width: 2865px;
+  margin: 0;
+  height: 100%;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-right: 16px;
+  color: #fff;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  cursor: url("https://assets3.pxlecdn.com/assets/embed/glyph/mag-00cd0b12bf29f03094870ff20ba4ac98fc58024f6256b8dfc76e7c1196dafb99.png") 20 20,pointer;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block:nth-child(1) {
+  background-image: url("https://static.pxlecdn.com/photos/585563847/medium/115c6c4201e4ec7be083.jpg");
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block:nth-child(2) {
+  background-image: url("https://static.pxlecdn.com/photos/585025300/medium/ecb86bc265a15f8daf0f.jpg");
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block:nth-child(3) {
+  background-image: url("https://static.pxlecdn.com/photos/584621535/medium/91e2413da33a7290249c.jpg");
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block:nth-child(4) {
+  background-image: url("https://static.pxlecdn.com/photos/584590803/medium/a9e88747d9800bd059aa.heic");
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block:nth-child(5) {
+  background-image: url("https://static.pxlecdn.com/photos/584302907/medium/2a1c02ec99461039f547.webp");
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block:last-child {
+  margin-right: 0px;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block:hover .info_holder {
+  transform: translateY(0%);
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .info_holder {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  transform: translateY(100%);
+  overflow: hidden;
+  transition: all .25s ease;
+  z-index: 3;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .info_holder svg {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 20px;
+  bottom: -1px;
+  z-index: 3;
+  fill: white;
+  overflow: hidden;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .info_holder .social_holder {
+  position: absolute;
+  width: 100px;
+  height: 18px;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .25s ease;
+  cursor: pointer;
+  z-index: 3;
+  display: none;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .info_holder .social_holder .social_button {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  text-align: center;
+  font-size: 19px;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .info_holder .info_content {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 5px 0;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .info_holder .info_content .users_handle {
+  display: block;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .info_holder .info_content .users_handle a {
+  display: block;
+  position: relative;
+  width: calc(100% - 20px);
+  color: #323a45;
+  padding: 5px 10px;
+  font-size: 13px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .info_holder .info_content .users_caption {
+  display: block;
+  position: relative;
+  color: #4d5866;
+  font-size: 12px;
+  padding: 5px 10px;
+  text-overflow: ellipsis;
+  width: calc(100% - 20px);
+  white-space: nowrap;
+  overflow: hidden;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .product_badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .clearfix .photo_block .product_badge.circle_icon {
+  background-color: #000;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  border-radius: 50%;
+  text-align: center;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .controls {
+  width: 100%;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .controls .btn {
+  width: 70px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, .8);
+  cursor: pointer;
+  z-index: 9;
+}
+section.renew2022-main-section--pixley .renew2022-section-wrap .controls .btn.next {
+  background-image: url("https://assets1.pxlecdn.com/assets/embed/glyph/next@2x-8dd64ee649b23a16e84d9d73cee03530becaa3adca45d7ccc70b9fe64333da30.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px 40px;
+}
+
+
+/* Footer */
+footer {
+  position: relative;
+  margin-top: 80px;
+  padding-bottom: 38px;
+  border-top: 1px solid #eee;
+  font-size: 1.2em;
+  letter-spacing: .03em;
+}
+footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 55px;
+  width: 100%;
+  height: 1px;
+  background-color: #ededed;
+}
+footer .l-footer {
+  position: relative;
+  max-width: 1200px;
+  padding: 0 50px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+footer .l-footer .footer-links {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+footer .l-footer .footer-links .footer-links-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+}
+footer .l-footer .footer-links .footer-links-wrap .footer-item {
+  position: relative;
+  display: inline-block;
+  padding: 3px 21px 3px 0;
+  font-size: 15px;
+  color: #888;
+}
+footer .l-footer .footer-links .footer-links-wrap .footer-item:hover {
+  text-decoration: underline;
+  text-decoration-color: #000;
+}
+footer .l-footer .footer-links .footer-links-wrap .footer-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 13px;
+  background-color: #c9c9c9;
+  transform: translateY(-50%);
+}
+footer .l-footer .footer-links .footer-links-wrap .footer-item:last-child::after {
+  display: none;
+}
+footer .l-footer .footer-links .footer-links-wrap .footer-item + .footer-item {
+  margin-left: 20px;
+}
+footer .l-footer .footer-links .footer-links-wrap .footer-item:nth-child(4) {
+  font-weight: bold;
+  color: #555;
+}
+footer .l-footer .footer-links .footer-sns-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 240px;
+  height: 55px;
+}
+footer .l-footer .footer-links .footer-sns-wrap .footer-mark-wrap .footer-mark a {
+  display: inline-block;
+  width: 42px;
+}
+footer .l-footer .footer-links .footer-sns-wrap .footer-sns {
+  display: flex;
+  gap: 10px;
+  padding-left: 10px;
+}
+footer .l-footer > .footer-links-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 820px;
+  padding-top: 7px;
+  height: 36px;
+}
+footer .l-footer > .footer-links-wrap .footer-item {
+  display: inline-block;
+  padding: 3px 8px 3px 0;
+  font-size: 15px;
+  color: #999;
+  letter-spacing: 0.01em;
+}
+footer .l-footer .footer-legality {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 20px;
+  font-size: 13px;
+}
+footer .l-footer .footer-legality .footer-item {
+  display: inline-block;
+  color: #999;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+footer .l-footer .footer-legality .footer-item .copy {
+  font-size: 14px;
+}
+footer .l-footer .footer-legality .footer-item strong {
+  font-weight: 700;
+}
+
+
+/* Go-top */
+.go-top-container {
+  position: fixed;
+  width: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  font-size: 0;
+  text-align: right;
+  z-index: 100;
+  transition: .3s;
+}
+.go-top-container .go-top {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transition: all .2s ease-out;
+}
+.go-top-container .go-top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #000;
+  opacity: .3;
+}
+.go-top-container .go-top:hover {
+  background-color: #000;
+}

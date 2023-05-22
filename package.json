@@ -1,0 +1,22 @@
+{
+  "name": "sulwhasoo-clone",
+  "version": "1.0.0",
+  "description": "sulwhasoo-clone-coding",
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "swiper": "^9.3.2"
+  }
+}
