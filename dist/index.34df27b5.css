@@ -422,7 +422,6 @@ section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item .link .renew20
   flex-direction: column;
   justify-content: flex-end;
   margin: 0 auto;
-  padding-left: 130px;
   display: flex;
 }
 
@@ -443,17 +442,13 @@ section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item .link .renew20
   font-weight: 500;
 }
 
-section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item:nth-of-type(4) .link .renew2022-inner .renew2022-text-wrap .renew2022-text--s, section.renew2022-kv-section .renew2022-kv .kv-list .kv-list-item:nth-of-type(4) .link .renew2022-inner .renew2022-text-wrap .renew2022-text--m {
-  color: #000;
-  text-shadow: none;
-}
-
 section.renew2022-kv-section .pagination-container {
-  width: 100%;
+  width: 1440px;
   z-index: 9;
   position: absolute;
-  bottom: 70px;
-  left: 170px;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 section.renew2022-kv-section .pagination-container .pagination-container__inner {
