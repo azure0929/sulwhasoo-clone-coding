@@ -48,13 +48,13 @@ https://www.sulwhasoo.com/kr/ko/index.html
 
 <br><br>
 
-### 아쉬운점
-* header의 .gnb-a1을 hover 했을 때 header의 bottom이 늘어나는 효과를 구현할 수 없었습니다.
-* 한국/한국어 아이콘 클릭 시 select를 활용한 리스트 구현을 할 수 없었습니다.
-* 돋보기 아이콘 클릭 시 header의 높이가 높아지면서 input 태그를 활용한 검색 부분 구현을 할 수 없었습니다.
-* pagination 일시정지 버튼 클릭 시 swiper slide가 멈추는 기능 구현을 할 수 없었습니다.
-* With Sulwhasoo 부분에서 다음 버튼 클릭 시 이전 버튼이 생성되고, 다음 부분이 나타나는 기능 구현을 할 수 없었습니다.
-* 글자가 아래에서 위로 fadeIn 되는 효과 구현을 할 수 없었습니다.
+### 아쉬운 부분
+* header의 .gnb-a1을 hover 했을 때 header의 bottom이 늘어나는 효과 구현
+* 한국/한국어 아이콘 클릭 시 select를 활용한 리스트 구현
+* 돋보기 아이콘 클릭 시 header의 높이가 높아지면서 input 태그를 활용한 검색 부분 구현
+* pagination 일시정지 버튼 클릭 시 swiper slide가 멈추는 기능 구현
+* With Sulwhasoo 부분에서 다음 버튼 클릭 시 이전 버튼이 생성되고, 다음 부분이 나타나는 기능 구현
+* 글자가 아래에서 위로 fadeIn 되는 효과 구현
 
 <br><br>
 
